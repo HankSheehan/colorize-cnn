@@ -8,4 +8,4 @@ This project is to explore the possibilites of colorizing grayscale images using
 The neural network is created with Python using the Keras framework. The dataset will be the CIFAR-10 dataset.
 
 ## Hardware
-This model will trained on my 13-inch Macbook with no GPU, so let's see how it goes ¯\_(ツ)_/¯.
+This model will trained on my 13-inch Macbook with no GPU, so let's see how it goes ¯\\_(ツ)_/¯.
