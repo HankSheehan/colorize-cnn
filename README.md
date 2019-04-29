@@ -1,5 +1,12 @@
+
 # colorize-cnn
+
 A convolutional neural network to colorize grayscale images.
+
+Author: Hank Sheehan
+
+---
+
 
 ## Abstract
 This project is to explore the possibilites of colorizing grayscale images using convolutional neural network. There should be an input of a grayscale image of any dimension and an output of an RGB image of the same dimension, representing the grayscale image in color.
@@ -68,3 +75,10 @@ When comparing this to my last architecture, this is exactly what I was expectin
 
 
 #### Training it for hours and hours
+For the final experiment, I tried training the last architecture for 100 epochs. This is 10 times the training time I gave the last model, so I was hoping thew 5 hour run paid off.
+
+
+## Conclusion
+To sum up what I've learned from this little project:
+
+![Convolution and Dense Layers > Single Dense Layer](README-assets/conclusion.png)
