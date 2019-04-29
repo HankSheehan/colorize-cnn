@@ -22,6 +22,16 @@ The specs of the machine used are the following:
 - **Model**: MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
 
 ## The Experiment
+### Flatten -> Dense
+I began with a single dense layer. In order to have the dense layer work with a 32 by 32 by 1 image (32x32, 1 grayscale channel), I had to flatten the image to a 1024 length array. This dense layer would output a 3072 length array, 3 values for each pixel. This was a good starting place since it got me used to normalizing the images and training a network in this way. The results look good for a neural network that is essentially just mapping a single channel to three channels without any context.
+
+![Figure 1](README-assets/flatten-dense1.png)
+
+![Figure 2](README-assets/flatten-dense2.png)
+
+![Figure 3](README-assets/flatten-dense3.png)
+
+
 
 
 ## Results
