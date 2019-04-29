@@ -16,6 +16,8 @@ for test in test_set:
     test = cv2.cvtColor(test, cv2.COLOR_BGR2GRAY)
     cv2.imshow('grayscale', test)
     test = np.reshape(test, (1, 32, 32)).astype('float32')
+    test = np.expand_dims(test, axis=-1)
+
 
     test /= 255
 
