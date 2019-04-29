@@ -81,4 +81,6 @@ For the final experiment, I tried training the last architecture for 100 epochs.
 ## Conclusion
 To sum up what I've learned from this little project:
 
-![Convolution and Dense Layers > Single Dense Layer](README-assets/conclusion.png)
+![Convolution and Dense Layers > Single Dense Layer](README-assets/conclusion1.png)
+
+![Two Convolution Layers > One Convolution Layer](README-assets/conclusion2.png)
