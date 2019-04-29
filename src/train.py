@@ -40,9 +40,6 @@ x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
 x_train /= 255
 x_test /= 255
-print('x_train shape:', x_train.shape)
-print(x_train.shape[0], 'train samples')
-print(x_test.shape[0], 'test samples')
 
 # Add another dimension for the grayscale channel
 x_train, x_test = np.expand_dims(x_train, axis=-1), np.expand_dims(x_test, axis=-1)
@@ -50,18 +47,18 @@ x_train, x_test = np.expand_dims(x_train, axis=-1), np.expand_dims(x_test, axis=
 # Convert the target data to 1 dimensional arrays
 y_train, y_test = np.reshape(y_train, (len(y_train), 32*32*3)), np.reshape(y_test, (len(y_test), 32*32*3))
 
-model = Sequential()
-# Convolve and output a 1D value for each pixel
-model.add(Conv2D(3, kernel_size=(3, 3) ,activation='relu', input_shape=INPUT_SHAPE))
+print('x_train shape:', x_train.shape)
+print('x_test shape:', x_test.shape)
 
-# model.add(BatchNormalization())
-# model.add(MaxPooling2D(pool_size=(2, 2)))
-#
-# # Convolve and output a 3D value for each pixel
-# model.add(Conv2D(1, (3, 3), activation='sigmoid', input_shape=(32,32,3)))
-#
-# model.add(Dropout(0.25))
-#
+print('y_train shape:', y_train.shape)
+print('y_test shape:', y_test.shape)
+
+model = Sequential()
+
+model.add(Conv2D(32, kernel_size=(3, 3) ,activation='relu', input_shape=INPUT_SHAPE))
+model.add(BatchNormalization())
+model.add(Conv2D(3, kernel_size=(3, 3) ,activation='sigmoid', input_shape=INPUT_SHAPE))
+
 # Flatten images to vectors
 model.add(Flatten(input_shape=(32,32)))
 model.add(Dense(units=32*32*3, activation='sigmoid', input_shape=INPUT_SHAPE))
@@ -80,4 +77,4 @@ score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 
-model.save('colorization_model.h5')
+model.save('convolution-batchnormalization-convolution-flatten-dense_model.h5')
