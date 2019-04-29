@@ -38,6 +38,10 @@ For these images I used a batch size of 32 and 10 epochs of learning. The accura
 
 ![Figure 3](README-assets/flatten-dense3.png)
 
+So how does a single dense layer stack up?
+
+![Sounds good, doesn't work](README-assets/soundsgood.jpg)
+
 #### Convolution -> Flatten -> Dense
 The next step was to add a convolution layer to give the neural network context. I decided to begin with a kernal of 3x3 since that seemed quick to train and a relatively big size (context-wise) for a 32x32 image. Running this on the batch size of 32 and 10 epochs took about 30 minutes and gave an accuracy of around 3% (3 times better!).
 
@@ -63,5 +67,4 @@ When comparing this to my last architecture, this is exactly what I was expectin
 ![Figure 9](README-assets/convolution-batchnormalization-convolution-flatten-dense_model3.png)
 
 
-#### Convolution -> Batch Normalization -> Convolution -> Flatten -> Dense -> Dense
-At this point, I'm feeling pretty good about the output. I did not train the last architecture very long, but I think it could still be improved. I added a second dense layer to try to add a non-convolution layer that uses ReLU as the activation function. I'm thinking this may help the washed-out look of the output images.
+#### Training it for hours and hours
