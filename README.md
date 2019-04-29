@@ -75,7 +75,7 @@ When comparing this to my last architecture, this is exactly what I was expectin
 
 
 #### Training it for hours and hours
-For the final experiment, I tried training the last architecture for 100 epochs. This is 10 times the training time I gave the last model, so I was hoping thew 5 hour run paid off.
+For the final experiment, I tried training the last architecture for 100 epochs. This is 10 times the training time I gave the last model, so I was hoping the 5 hour run paid off.
 
 
 ## Conclusion
