@@ -89,6 +89,7 @@ In the end, my last architecture was looking pretty good with only 10 epochs of 
 
 To sum up what I've learned from this little project:
 
+![Two Convolution Layers > One Convolution Layer](README-assets/conclusion2.png)
+
 ![Convolution and Dense Layers > Single Dense Layer](README-assets/conclusion1.png)
 
-![Two Convolution Layers > One Convolution Layer](README-assets/conclusion2.png)
