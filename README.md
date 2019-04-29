@@ -34,6 +34,8 @@ For the loss function I decided to use cross entropy. This is because cross entr
 
 ### Architecture
 
+I wanted to try a hybrid architecture with convolution layers at the beginning and dense layers toward the end. I thought this could be a promising architecture for colorization.
+
 #### Flatten -> Dense
 I began with a single dense layer. In order to have the dense layer work with a 32 by 32 by 1 image (32x32, 1 grayscale channel), I had to flatten the image to a 1024 length array. This dense layer would output a 3072 length array, 3 values for each pixel. This was a good starting place since it got me used to normalizing the images and training a network in this way. The results look good for a neural network that is essentially just mapping a single channel to three channels without any context.
 
