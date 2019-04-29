@@ -7,7 +7,7 @@ from keras.models import load_model
 from keras.datasets import cifar10
 
 
-model = load_model('convolution-batchnormalization-convolution-flatten-dense_model.h5')
+model = load_model('long-boy.h5')
 
 test_set = cifar10.load_data()[0][0]
 for test in test_set:

@@ -27,7 +27,7 @@ def convert_img_array_gray(img_array):
     return np.array([cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) for img in img_array])
 
 batch_size = 32
-epochs = 10
+epochs = 100
 
 # the data, split between train and test sets
 y_train, y_test = cifar10.load_data()
@@ -77,4 +77,4 @@ score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 
-model.save('convolution-batchnormalization-convolution-flatten-dense_model.h5')
+model.save('long-boy.h5')
