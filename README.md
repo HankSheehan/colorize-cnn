@@ -77,6 +77,14 @@ When comparing this to my last architecture, this is exactly what I was expectin
 #### Training it for hours and hours
 For the final experiment, I tried training the last architecture for 100 epochs. This is 10 times the training time I gave the last model, so I was hoping the 5 hour run paid off.
 
+After training for 100 epochs, the results looked much worse than the previous model regardless of the 8% accuracy. Most of the outputs were a greenish-gray and then only images that looked okay were ones with grassy backgrounds. I think that the model may have overfitted this dataset and there may be too many grassy images in CIFAR-10.
+
+![Figure 10](README-assets/long-boy1.png)
+
+![Figure 11](README-assets/long-boy2.png)
+
+![Figure 12](README-assets/long-boy3.png)
+
 
 ## Conclusion
 To sum up what I've learned from this little project:
