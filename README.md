@@ -47,10 +47,6 @@ For these images I used a batch size of 32 and 10 epochs of learning. The accura
 
 ![Figure 3](README-assets/flatten-dense3.png)
 
-So how does a single dense layer stack up?
-
-![Sounds good, doesn't work](README-assets/soundsgood.jpg)
-
 #### Convolution -> Flatten -> Dense
 The next step was to add a convolution layer to give the neural network context. I decided to begin with a kernal of 3x3 since that seemed quick to train and a relatively big size (context-wise) for a 32x32 image. Running this on the batch size of 32 and 10 epochs took about 30 minutes and gave an accuracy of around 3% (3 times better!).
 
