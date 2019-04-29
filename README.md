@@ -87,6 +87,8 @@ After training for 100 epochs, the results looked much worse than the previous m
 
 
 ## Conclusion
+In the end, my last architecture was looking pretty good with only 10 epochs of training. In the future, I could tweak the architecture using dropout or other techniques in order to reduce overfitting. I could also try many different numbers of epochs and cross validate. As of now, I'm pretty impressed with how 10 epochs turned out.
+
 To sum up what I've learned from this little project:
 
 ![Convolution and Dense Layers > Single Dense Layer](README-assets/conclusion1.png)
