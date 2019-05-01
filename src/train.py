@@ -26,8 +26,12 @@ else:
 def convert_img_array_gray(img_array):
     return np.array([cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) for img in img_array])
 
+def convert_img_array_hsv(img_array):
+    return np.array([cv2.cvtColor(img, cv2.COLOR_BGR2HSV) for img in img_array])
+
+
 batch_size = 32
-epochs = 100
+epochs = 10
 
 # the data, split between train and test sets
 y_train, y_test = cifar10.load_data()
@@ -38,11 +42,15 @@ y_train, y_test = y_train[0], y_test[0]
 x_train, x_test = convert_img_array_gray(y_train), convert_img_array_gray(y_test)
 x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
+# TODO: THESE NEED TO BE CHANGED FOR THE RANGES OF HSV OR WHATEVER COLORSPACE
 x_train /= 255
 x_test /= 255
 
 # Add another dimension for the grayscale channel
 x_train, x_test = np.expand_dims(x_train, axis=-1), np.expand_dims(x_test, axis=-1)
+
+# Convert the colorspace of the target data
+y_train, y_test = convert_img_array_hsv(y_train), convert_img_array_hsv(y_test)
 
 # Convert the target data to 1 dimensional arrays
 y_train, y_test = np.reshape(y_train, (len(y_train), 32*32*3)), np.reshape(y_test, (len(y_test), 32*32*3))
@@ -77,4 +85,4 @@ score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 
-model.save('long-boy.h5')
+model.save('hsv.h5')
